@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">l3_tp1</string>
+    <string name="entier1">Entier 1</string>
+    <string name="entier2">Entier 2</string>
+    <string name="text_result">Résultat :</string>
+    <string name="result">Aucun</string>
+</resources>
