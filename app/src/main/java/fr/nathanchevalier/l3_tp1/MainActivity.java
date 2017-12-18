@@ -1,5 +1,6 @@
 package fr.nathanchevalier.l3_tp1;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.Objects;
+
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         final Button button_multiplier = findViewById(R.id.fois);
 
         final Button button_effacer = findViewById(R.id.effacer);
+
+        final Button button_newactivity = findViewById(R.id.newactivity);
 
         button_diviser.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,16 +89,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        button_oner.setOnClickListener(new View.OnClickListener() {
+        button_effacer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!Objects.equals(entier_1.getText().toString(), "") && !Objects.equals(entier_2.getText().toString(), "")) {
-                    int valEntier1 = Integer.parseInt(entier_1.getText().toString());
-                    int valEntier2 = Integer.parseInt(entier_2.getText().toString());
-                    int value = valEntier1 + valEntier2;
-                    result.setText(String.valueOf(value));
-                } else
-                    result.setText(" Erreur");
+                entier_1.setText("");
+                entier_2.setText("");
+            }
+        });
+
+        button_newactivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Activity2.class);
+                intent.putExtra("entier_1", Integer.parseInt(entier_1.getText().toString()));
+                intent.putExtra("entier_2", Integer.parseInt(entier_2.getText().toString()));
+                startActivity(intent);
             }
         });
     }

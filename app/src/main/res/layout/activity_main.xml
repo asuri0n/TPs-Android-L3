@@ -91,6 +91,14 @@
             android:text="Effacer"
             tools:layout_editor_absoluteX="172dp"
             tools:layout_editor_absoluteY="116dp" />
+
+        <Button
+            android:id="@+id/newactivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lancer activité 2"
+            tools:layout_editor_absoluteX="172dp"
+            tools:layout_editor_absoluteY="116dp" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
