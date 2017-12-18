@@ -101,9 +101,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Activity2.class);
-                intent.putExtra("entier_1", Integer.parseInt(entier_1.getText().toString()));
-                intent.putExtra("entier_2", Integer.parseInt(entier_2.getText().toString()));
-                startActivity(intent);
+                String int1 = entier_1.getText().toString();
+                String int2 = entier_2.getText().toString();
+
+                if(!Objects.equals(int1, "") && !Objects.equals(int2, "")){
+                    intent.putExtra("entier_1",  Integer.parseInt(int1));
+                    intent.putExtra("entier_2",  Integer.parseInt(int2));
+                    startActivity(intent);
+                }
             }
         });
     }
