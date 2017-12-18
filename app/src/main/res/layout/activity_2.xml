@@ -18,12 +18,73 @@
             android:ems="10"
             android:inputType="numberSigned" />
 
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/radio_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+" />
+            <RadioButton
+                android:id="@+id/radio_moins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-" />
+            <RadioButton
+                android:id="@+id/radio_fois"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*" />
+            <RadioButton
+                android:id="@+id/radio_diviser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/" />
+        </RadioGroup>
+
         <EditText
             android:id="@+id/entier2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="numberSigned"/>
+
+        <Button
+            android:id="@+id/calculer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CALCULER" />
+
+        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_result"/>
+
+            <TextView
+                android:id="@+id/newresult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/result" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/effacer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Effacer"
+            tools:layout_editor_absoluteX="172dp"
+            tools:layout_editor_absoluteY="116dp" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
