@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="      Par Bluetooth..." />
+
+        <TextView
+            android:id="@+id/dialogueTitre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vous avez choisi Envoyer Par Bluetooth!" />
+
+        <ImageView
+            android:id="@+id/dialogueImageView"
+            android:layout_width="match_parent"
+            android:layout_height="351dp"
+            android:adjustViewBounds="true"
+            android:background="#FFFFFF"
+            android:maxHeight="91dip"
+            android:maxWidth="47dip"
+            android:padding="10dip"
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Annuler" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accepter" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
